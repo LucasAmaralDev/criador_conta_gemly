@@ -2,7 +2,7 @@ from Utils.geradorDeUsername import gerarUserame
 from Model.ComandosWebdriver import *
 from Model.WebdriverModelBot import Navegador
 from Controllers.ManipularEmailController import *
-
+from Model.ManipularCookies import *
 
 def Criar_Conta(driver):
     
