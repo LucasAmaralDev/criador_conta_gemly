@@ -8,7 +8,18 @@ def Criar_Conta(driver):
     
     username = gerarUserame()
 
-    driver.get("https://gemly.gg/signup")
+    driver.get("https://gemly.gg/?r=pedrocamposrr608")
+    sleep(2)
+
+    #clicar no a com o class "link" e p href="/signup"
+    links = driver.find_elements(By.TAG_NAME, "a")
+    for link in links:
+        try:
+            if link.get_attribute("href") == "https://gemly.gg/signup":
+                link.click()
+                break
+        except:pass
+    sleep(2)
 
     digitar_username = digitar_texto_tagname_name(driver, "input", "login", username)
     if digitar_username == False:
